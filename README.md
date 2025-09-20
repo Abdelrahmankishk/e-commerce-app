@@ -1,59 +1,107 @@
-# ECommerceApp
+# 🛒 FreshCart – Angular E-Commerce App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.6.
+FreshCart is a modern and responsive **E-Commerce web application** built with **Angular** and styled using **Tailwind CSS**.  
+It integrates with the **[Route E-commerce API](https://documenter.getpostman.com/view/5709532/2s93JqTRWN)** to provide a full online shopping experience — from browsing products to secure checkout.
 
-## Development server
+---
 
-To start a local development server, run:
+## ✨ Features
+
+### 👤 Authentication & User Management
+
+- Register a new account
+- Login with email and password
+- Forget & Reset password functionality
+- Secure token handling with cookies (via **ngx-cookies**)
+
+### 🛍️ Shopping Experience
+
+- Browse products on **Home** and **Product Listing** pages
+- View **detailed product information**
+- Add items to **Cart** and manage them (update, remove, view total)
+- Pagination support for product listing (**ngx-pagination**)
+- Search functionality for products
+
+### 💳 Checkout & Payments
+
+- Checkout flow with shipping details
+- Integrated with **Stripe Payment Gateway** (Test mode)
+  - Test Card: `4242 4242 4242 4242`
+  - Expiry: Any future date
+  - CVC: Any 3 digits
+  - Name: Any
+
+### 🎨 UI & UX Enhancements
+
+- **Tailwind CSS** for modern styling
+- **Font Awesome** icons for better UI
+- **Owl Carousel** for homepage banners/sliders
+- **Toastr Notifications** for alerts & messages
+- **Loading Spinner** for smooth responses (**ngx-spinner**)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: [Angular](https://angular.io/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Font Awesome](https://fontawesome.com/)
+- **Carousel**: [ngx-owl-carousel-o](https://www.npmjs.com/package/ngx-owl-carousel-o)
+- **Pagination**: [ngx-pagination](https://www.npmjs.com/package/ngx-pagination)
+- **Token Management**: [ngx-cookie-service](https://www.npmjs.com/package/ngx-cookie-service)
+- **Notifications**: [ngx-toastr](https://www.npmjs.com/package/ngx-toastr)
+- **Loading Spinner**: [ngx-spinner](https://www.npmjs.com/package/ngx-spinner)
+- **API**: [Route E-commerce App](https://documenter.getpostman.com/view/5709532/2s93JqTRWN)
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/FreshCart.git
+cd FreshCart
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the Development Server
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+App will be available at: **http://localhost:4200/**
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🔗 API Reference
 
-```bash
-ng generate component component-name
-```
+FreshCart uses the **Route E-commerce API** for all backend functionality:  
+👉 [API Documentation](https://documenter.getpostman.com/view/5709532/2s93JqTRWN)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🔮 Future Enhancements
 
-## Building
+Planned features to make FreshCart even better:
 
-To build the project run:
+- **Categories Page** 🗂️
 
-```bash
-ng build
-```
+  - Display all available product categories.
+  - When a user clicks on a category, show all products belonging to that category.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **Brands Page** 🏷️
+  - Display all available product brands.
+  - When a user clicks on a brand, show all products from that brand.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 👨‍💻 Author
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Developed by **[Abdelrahman kishk]** ✨
