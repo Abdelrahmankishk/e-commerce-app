@@ -1,0 +1,51 @@
+<section class="w-11/12 mx-auto py-14">
+  <div class="flex items-center justify-between">
+    <h2 class="text-4xl text-blue-950 py-10">Products:</h2>
+    <div class="relative w-1/2">
+      <div
+        class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+      >
+        <svg
+          class="w-4 h-4 text-gray-500"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 20 20"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+          />
+        </svg>
+      </div>
+      <input
+        [(ngModel)]="text"
+        type="search"
+        id="default-search"
+        class="block w-full p-4 ps-10 text-sm text-blue-600 border border-blue-950 rounded-lg bg-white focus:ring-blue-600 focus:border-blue-50"
+        placeholder="Search for a Ceatain Product"
+        required
+      />
+    </div>
+  </div>
+  <div
+    class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-5 pb-10"
+  >
+    @for (Product of ProductList | paginate: { id: 'foo', itemsPerPage:
+    pageSize, currentPage: p, totalItems: total} | search: text; track $index) {
+    <app-card [product]="Product"></app-card>
+    }
+  </div>
+
+  <div class="text-end">
+    <pagination-controls
+      class="my-pagination"
+      id="foo"
+      (pageChange)="pageChanged($event)"
+    >
+    </pagination-controls>
+  </div>
+</section>

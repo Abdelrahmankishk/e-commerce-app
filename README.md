@@ -60,7 +60,7 @@ It integrates with the **[Route E-commerce API](https://documenter.getpostman.co
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/FreshCart.git
+git clone https://github.com/Abdelrahmankishk/e-commerce-app
 cd FreshCart
 ```
 

@@ -1,0 +1,8 @@
+h2 {
+  font-family: "Playwrite ES", cursive;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: #2563eb;
+  color: #ffffff;
+  font-family: "Playwrite ES", cursive;
+}

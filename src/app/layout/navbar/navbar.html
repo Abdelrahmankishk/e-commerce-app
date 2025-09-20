@@ -1,0 +1,163 @@
+<nav class="bg-gray-300 border-gray-300 dark:bg-gray-300 dark:border-gray-300">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2 py-2"
+  >
+    <a href="#" class="flex items-start space-x-2 rtl:space-x-reverse">
+      <i id="CartColor" class="fa-solid fa-cart-shopping text-2xl"></i>
+      <span
+        id="CartColor"
+        class="self-center text-2xl font-semibold whitespace-nowrap me-7 dark:text-white"
+        >FreshCart</span
+      >
+    </a>
+    <button
+      data-collapse-toggle="navbar-dropdown"
+      type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      aria-controls="navbar-dropdown"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"
+        />
+      </svg>
+    </button>
+    <div class="hidden w-full grow md:flex md:w-auto" id="navbar-dropdown">
+      @if (isLogin === false) {
+      <ul
+        class="flex flex-col font-medium mt-5 border border-gray-100 rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:border-0"
+      >
+        <li>
+          <a
+            routerLink="/home"
+            routerLinkActive=" text-blue-950  "
+            class="block text-blue-600 cursor-pointer hover:text-blue-950 hover:border-2 hover:p-1 hover:transition-all border-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+
+        <li>
+          <a
+            routerLink="/products"
+            routerLinkActive="text-blue-950 "
+            class="block cursor-pointer text-blue-600 hover:border-2 hover:p-1 hover:transition-all hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            >Products</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/categories"
+            routerLinkActive="text-blue-950"
+            class="block cursor-pointer text-blue-600 hover:border-2 hover:p-1 hover:transition-all hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            >Categories</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/brands"
+            routerLinkActive="text-blue-950 "
+            class="block cursor-pointer text-blue-600 hover:border-2 hover:p-1 hover:transition-all hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            >Brands</a
+          >
+        </li>
+      </ul>
+      }
+      <ul
+        class="flex flex-col ms-auto font-medium p-4 mt-4 border border-gray-100 rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+      >
+        <li class="flex space-x-7">
+          <a
+            href="#"
+            class="block text-blue-600 hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="#"
+            class="block text-blue-600 hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="#"
+            class="block text-blue-600 hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            ><i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a
+            href="#"
+            class="block text-blue-600 hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="#"
+            class="block text-blue-600 hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="#"
+            class="block text-blue-600 hover:text-blue-950 transition-colors rounded-sm md:bg-transparent me-7"
+            aria-current="page"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </li>
+        @if(isLogin === true){
+        <li>
+          <a
+            routerLink="/login"
+            routerLinkActive="text-blue-950 "
+            class="block text-blue-600 hover:border-2 hover:p-1 hover:transition-all hover:text-blue-950 transition-colors rounded-sm md:bg-transparent md:"
+            aria-current="page"
+            >Login</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/register"
+            routerLinkActive="text-blue-950 "
+            class="block text-blue-600 hover:border-2 hover:p-1 hover:transition-all hover:text-blue-950 transition-colors rounded-sm md:bg-transparent md:"
+            aria-current="page"
+            >Register</a
+          >
+        </li>
+        }@else {
+        <li>
+          <a
+            routerLink="/cart"
+            routerLinkActive="text-white p-1 !bg-blue-600"
+            class="block cursor-pointer text-2xl text-blue-600 hover:border-2 hover:p-1 hover:transition-all hover:text-blue-950 transition-colors rounded-sm md:bg-transparent"
+            aria-current="page"
+            ><i class="fa-solid fa-cart-plus"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            (click)="LogOut()"
+            class="block cursor-pointer text-blue-600 hover:border-2 hover:p-1 hover:transition-all hover:text-blue-950 transition-colors rounded-sm md:bg-transparent md:"
+            aria-current="page"
+            >Signout</a
+          >
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
