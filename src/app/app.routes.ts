@@ -47,7 +47,7 @@ export const routes: Routes = [
       { path: 'brands', component: Brands, title: 'Brands' },
       { path: 'categories', component: Categories, title: 'Categories' },
       { path: 'allorders', component: Allorders, title: 'Order confirmation' },
-      { path: 'details/:slug/:id', component: Details, title: 'Details' },
+      { path: 'details/:id', component: Details, title: 'Details' },
       { path: 'checkout/:id', component: Checkout, title: 'Checkout' },
     ],
   },
