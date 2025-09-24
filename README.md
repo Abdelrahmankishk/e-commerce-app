@@ -97,8 +97,19 @@ Planned features to make FreshCart even better:
   - When a user clicks on a category, show all products belonging to that category.
 
 - **Brands Page** 🏷️
+
   - Display all available product brands.
   - When a user clicks on a brand, show all products from that brand.
+
+- **Secure Token Validation**:
+
+  - Currently, tokens are saved correctly; however, if any modification occurs to the token, the system still grants access.
+  - In the future, stricter token validation will be implemented to ensure that any tampered or invalid token will be rejected, enhancing overall application security.
+
+- **Wishlist Feature**:
+  - A Wishlist section will be introduced where users can save their favorite products.
+  - Each product will have a wishlist icon (e.g., a heart symbol)
+  - when clicked, the product will be added to the user's wishlist for easy access later.
 
 ---
 
